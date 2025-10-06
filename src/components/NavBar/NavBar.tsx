@@ -6,19 +6,21 @@ import {FocusContext, setFocus, useFocusable} from "@noriginmedia/norigin-spatia
 
 
 interface NavBarProps {
-    focusKey?: string;
+    focusKey: string;
 }
 export const NavBar: FC<NavBarProps> = ({focusKey: focusKeyParam}) => {
-    const{ref} = useFocusable({
+    const{ref , focusSelf} = useFocusable({
         focusable: true,
         focusKey: focusKeyParam,
     })
 
     useEffect(() => {
-        setFocus('DRAMA_BTN')
-    }, []);
+        focusSelf()
+    }, [focusSelf]);
+
+
     return (
-        <FocusContext.Provider value={focusKeyParam as string}>
+        <FocusContext.Provider value={focusKeyParam}>
         <NavBarContainer ref={ref}>
             <NabBarItemsWrappper>
                 <Button focusKey="ACTION_BTN">
