@@ -7,12 +7,7 @@ import {useFocusable} from "@noriginmedia/norigin-spatial-navigation";
 export const MovieCard: FC<MovieCardPropsType> = ({title, focusKey, onFocus: onCardFocus}) => {
     const {ref, focused} = useFocusable({
         focusKey: focusKey,
-        onFocus: (layout) => {
-
-            if (onCardFocus && layout) {
-                onCardFocus({ y: layout.top });
-            }
-        },
+        onFocus: onCardFocus
     });
 
     return (
