@@ -1,1 +1,1 @@
-export {MovieCard} from './MovieCard.tsx'
+export { MovieCard } from "./MovieCard.tsx";

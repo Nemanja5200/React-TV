@@ -5,8 +5,8 @@ import App from "./App.tsx";
 import { init } from "@noriginmedia/norigin-spatial-navigation";
 
 init({
-  distanceCalculationMethod: 'center',
-  debug: true,
+  distanceCalculationMethod: "center",
+  debug: false,
   visualDebug: true,
   throttle: 100,
   throttleKeypresses: true,
